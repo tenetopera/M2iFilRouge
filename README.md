@@ -1,4 +1,4 @@
-# Projet File rouge IOT auprès de M2i du 10/02/2022 au 22/02/2022
+# Projet Fil rouge IOT auprès de M2i du 10/02/2022 au 22/02/2022
 
 ## Le cahier des charges 
 Le cahier des charges et l'ensemble des fichiers annexes on été fournis par M. Youssef Elmoti, formateur et asistant pour ce projet fil rouge de fin de formation FD-DATA-0921-AURA auprès de M2i. Il s'agit :
