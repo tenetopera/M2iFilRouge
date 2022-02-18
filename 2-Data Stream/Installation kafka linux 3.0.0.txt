@@ -1,0 +1,145 @@
+# INSTALLATION DE KAFKA
+# On a besoin de java version 11 
+
+
+sudo apt update 
+sudo apt install default-jdk
+
+java --version
+
+#openjdk version "11.0.9.1" 2020-11-04
+#OpenJDK Runtime Environment (build 11.0.9.1+1-Ubuntu-0ubuntu1.20.04)
+#OpenJDK 64-Bit Server VM (build 11.0.9.1+1-Ubuntu-0ubuntu1.20.04, mixed mode, sharing)
+
+wget https://dlcdn.apache.org/kafka/3.0.0/kafka_2.13-3.0.0.tgz
+
+tar xzf kafka_2.13-3.0.0.tgz
+sudo mv kafka_2.13-3.0.0.tgz /usr/local/kafka
+
+
+#
+#editer le fichier ~/bashrc  et y ajouter ces deux lignes à la fin du fichier 
+#export PATH=$KAFKA_HOME/bin:$PATH
+#export KAFKA_ROOT=$KAFKA_HOME
+#
+#commenter la ligne 
+#export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+#et ajouter la ligne sans le #
+#export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+
+source ~/.bashrc
+
+
+#
+# ensuite, nous devons créer manuellement un fichier de config pour le deamon zookeeper 
+# la raison de cette configuration particulière est que kafka vient avec une occurence intégrée de zookeeper
+#
+
+sudo nano /etc/systemd/system/zookeeper.service
+
+#
+# copier / coller le texte ci-dessous
+#
+
+[Unit]
+Description=Apache Zookeeper server
+Documentation=http://zookeeper.apache.org
+Requires=network.target remote-fs.target
+After=network.target remote-fs.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/kafka/bin/zookeeper-server-start.sh /usr/local/kafka/config/zookeeper.properties
+ExecStop=/usr/local/kafka/bin/zookeeper-server-stop.sh
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
+
+#
+# fin du copier / coller le texte ci-dessus
+# n'oublier pas d'enregistrer 
+#
+
+#
+# Il nous faut faire pareil pour le deamon kafka 
+#
+
+sudo nano /etc/systemd/system/kafka.service
+
+#
+# copier / coller le texte ci-dessous
+#
+
+[Unit]
+Description=Apache Kafka Server
+Documentation=http://kafka.apache.org/documentation.html
+Requires=zookeeper.service
+
+[Service]
+Type=simple
+Environment="JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64"
+ExecStart=/usr/local/kafka/bin/kafka-server-start.sh /usr/local/kafka/config/server.properties
+ExecStop=/usr/local/kafka/bin/kafka-server-stop.sh
+
+[Install]
+WantedBy=multi-user.target
+
+#
+# fin du copier / coller le texte ci-dessus
+# n'oublier pas d'enregistrer 
+#
+
+
+#
+# recharger les config pour les deamon systemd
+#
+
+sudo systemctl daemon-reload
+
+
+#
+#démarrer zookeeper et kafka
+#
+
+sudo systemctl start zookeeper
+sudo systemctl start kafka
+sudo systemctl status kafka
+
+
+#
+# pour tester kafka en ligne de commande, ouvrir deux terminaux, un pour le producteur et l'autre, pour le consomateur
+#
+
+# dans le terminal du producteur, nous allons d'abord créer un topic 
+
+kafka-topics.sh --bootstrap-server localhost:9092 --topic kafka.learning.orders --describe
+
+# dans le même terminal du producteur, nous allons lancer la console du producteur
+
+kafka-console-producer.sh --bootstrap-server localhost:9092 --property "parse.key=true" --property "key.separator=:" --topic kafka.learning.orders
+
+# puis,nous allons saisir à titre d'exemple quelques paires (clé, valeur)
+
+>1001:"ProductName"
+>1002:"ClientName"
+>1003:"StreetName"
+>1004:"ZipCode"
+>1004:"City"
+>1005:"ChickName"
+>1006:"STUDENTNAME"
+>
+
+# dans le terminal du cosomateur, nous allons lancer la console du consomateur
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic kafka.learning.orders --group test-consumer-group --property print.key=true --property key.separator=" = " --from-beginning
+
+# et voilà, si tout s'est bien passé, vous devrier voir le texte 
+1001 = "ProductName"
+1002 = "ClientName"
+1003 = "StreetName"
+1004 = "ZipCode"
+1004 = "City"
+1005 = "ChickName"
+1006 = "STUDENTNAME"
+
