@@ -50,7 +50,7 @@ En outre, afin de sattisfaire les exigeances du projet en matière d'intégratio
 <li>Le tableau de bord statique montrant les défférentes métriques des fichier csv fournis et chargés tels quels dans l'application Tableau. Le lien ci-contre permet d'y accéder <a haref=https://public.tableau.com/app/profile/voiturin/viz/Projet-Iot/Tableaudebord1?publish=yes>https://public.tableau.com/app/profile/voiturin/viz/Projet-Iot/Tableaudebord1?publish=yes</a> </li>
 </ul>
 
-### Partie Dynamique
+### Partie Dynamique (Temps Réel)
 
 #### Simulations des IOTs
 Pour simuler des IOTs produisant des données en flux continu, il a été nécessaire de mettre en oeuvre un certain nombre de composants.
