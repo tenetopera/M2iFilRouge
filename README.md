@@ -31,7 +31,7 @@ Ce document énonce l'approche globale adoptée pour la réalisation du projet e
 
 <ul>
     <li> Le Project Charter (au sens PMI) "<i><b>Project Charter IOT.odt</b></i>" : énonce l'approche globale, ainsi que les aspects liés à la portée, budget/coût, temps, communication, etc., </li>
-    <li> Le plan prévisionnel "<i><b>Project Plan IOT.ods</b></i>": Le plan de projet tel qu'immaginé au premier jour du lancement. Le projet étant de courte durée, et les délais respectés dans l'ensemble et à tout momentz, il n'a pas été nécessaire de l'amender au cours du projet.</li>
+    <li> Le plan prévisionnel "<i><b>Project Plan IOT.ods</b></i>": Le plan de projet tel qu'immaginé au premier jour du lancement. Le projet étant de courte durée, et les délais respectés dans l'ensemble et à tout moment, il n'a pas été nécessaire de l'amender au cours du projet.</li>
 </ul>
 
 ## Livrables 
@@ -74,7 +74,7 @@ Le but ultime étant de pouvoir observer des donées en mouvement,  la suite Ela
 <ul>
 <li>Le script yml pour la configuration de Elastisearch et Kibada avec Docker : <i><b>"docker-compose.yml"</i></b>,</li>
 <li>Le microservice d'ingestion dans Elastiseacrh des données découplées  en provenance des IOT : "<i><b>elastic_microservice2.py</i></b>",</li>
-<li>La video montrant un tableau de bord des données en mouvement : <i><b>"20220218_104145.mp4"</i></b>.</li>
+<li>La video montrant dans Kibana cloud un tableau de bord des données en mouvement issues du streaming de l'architechture mise en place : <i><b>"20220218_104145.mp4"</i></b>.</li>
 </ul>
 
 
