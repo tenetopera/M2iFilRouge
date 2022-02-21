@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+
+<resultset statement="desc iot.X46790" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row>
+	<field name="Field">code</field>
+	<field name="Type">varchar(10)</field>
+	<field name="Null">NO</field>
+	<field name="Key"></field>
+	<field name="Default">X46790</field>
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">GPS_Time</field>
+	<field name="Type">time</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Device_Time</field>
+	<field name="Type">datetime(6)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Longitude</field>
+	<field name="Type">decimal(4,2)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Latitude</field>
+	<field name="Type">decimal(4,2)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">GPS_Speed__Meters_second_</field>
+	<field name="Type">decimal(5,2)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Horizontal_Dilution_of_Precision</field>
+	<field name="Type">decimal(5,2)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Altitude</field>
+	<field name="Type">decimal(8,2)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Bearing</field>
+	<field name="Type">decimal(6,2)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">G_x_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">G_y_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">G_z_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">G_calibrated_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Air_Fuel_Ratio_Commanded___1_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Air_Fuel_Ratio_Measured___1_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Ambient_air_temp__C_</field>
+	<field name="Type">decimal(2,0)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Average_trip_speed_km_h_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Engine_Load___</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Engine_Load_Absolute____</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Fuel_Trim_Bank_1_Long_Term___</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Fuel_Trim_Bank_1_Short_Term___</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Fuel_used__trip__gal_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Speed__OBD__km_h_</field>
+	<field name="Type">decimal(5,2)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Engine_RPM_rpm_</field>
+	<field name="Type">decimal(12,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Fuel_flow_rate_hour_gal_hr_</field>
+	<field name="Type">decimal(11,8)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+</resultset>

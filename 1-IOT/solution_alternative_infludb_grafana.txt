@@ -1,0 +1,20 @@
+Solution cheap simple et performante
+-----------------------------------------------
+* Choix de la plateforme Big Data (Hadoop, Mapr, cloudera, HortonWorks ) 
+Distribution Linux Debian Like suffisement dimensionnée
+
+* Choix des outils de chargement et de mise à disposition des données (Talend, Nifi, … )
+Bash scripting et Mosquitto
+#souscription au topic Test
+$> mosquitto_sub -d -t Test 
+#publication sur le topic Test
+$> mosquitto_pub -d -t Test -m "Bonjour de la part du terminal 3 !"
+
+* Choix Base de données Nosql ou du moteur de recherche des données (Hbase, cassandra, mongodb, Neo4j, ElasticSearch, Solr, … ) 
+InfluxDB (base de données temporelle, dédié aux données horodatées)
+
+* Choix du bus de données (Kafka, Mapr-Streams, RabbitMQ,….)
+Mosquitto (il joue les broker)
+
+* Mise en place des outils de data-mining (R, Spark, Zeppelin, Spotfire, Tableaux…)
+Gafana (vraiment dédié au monitoring)

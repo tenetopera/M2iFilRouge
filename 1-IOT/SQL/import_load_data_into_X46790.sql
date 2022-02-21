@@ -1,0 +1,42 @@
+#  LINES TERMINATED BY '\r\n' -- or '\n'
+LOAD DATA INFILE 'X46790.csv' INTO TABLE X46790 FIELDS TERMINATED BY ',' 
+(
+GPS_Time,
+@Device_Time2,
+@Longitude	 ,
+@Latitude	,
+@GPS_Speed__Meters_second_,
+@Horizontal_Dilution_of_Precision	 ,
+@Altitude	 ,
+@Bearing	 ,
+G_x_	 ,
+G_y_	 ,
+G_z_	 ,
+G_calibrated_	,
+@Air_Fuel_Ratio_Commanded___1_	,
+Air_Fuel_Ratio_Measured___1_	,
+Ambient_air_temp__C_	,
+@Average_trip_speed_km_h_,	
+Engine_Load___	,
+@Engine_Load_Absolute____	,
+@Fuel_Trim_Bank_1_Long_Term___	,
+@Fuel_Trim_Bank_1_Short_Term___	,
+Fuel_used__trip__gal_	,
+Speed__OBD__km_h_	,
+@Engine_RPM_rpm_	,
+Fuel_flow_rate_hour_gal_hr_
+)
+SET Device_Time = STR_TO_DATE(case when @Device_Time2='' then null else @Device_Time2 end,'%d-%b-%Y %H:%i:%s.%f'),
+Longitude=case when @Longitude='' then null else @Longitude	 end,
+Latitude=case when @Latitude='' then null else @Latitude end	,
+GPS_Speed__Meters_second_=case when @GPS_Speed__Meters_second_='' then null else @GPS_Speed__Meters_second_ end	,
+Horizontal_Dilution_of_Precision=case when @Horizontal_Dilution_of_Precision='' then null else @Horizontal_Dilution_of_Precision end	,
+Altitude=case when @Altitude='' then null else @Altitude end	,
+Bearing=case when @Bearing='' then null else @Bearing end	,
+Air_Fuel_Ratio_Commanded___1_=case when @Air_Fuel_Ratio_Commanded___1_='' then null else @Air_Fuel_Ratio_Commanded___1_ end	,
+Average_trip_speed_km_h_=case when @Average_trip_speed_km_h_='' then null else @Average_trip_speed_km_h_ end	,
+Engine_Load_Absolute____=case when @Engine_Load_Absolute____='' then null else @Engine_Load_Absolute____ end	,
+Fuel_Trim_Bank_1_Long_Term___=case when @Fuel_Trim_Bank_1_Long_Term___='' then null else @Fuel_Trim_Bank_1_Long_Term___ end	,
+Fuel_Trim_Bank_1_Short_Term___	=case when @Fuel_Trim_Bank_1_Short_Term___='' then null else @Fuel_Trim_Bank_1_Short_Term___ end	,
+Engine_RPM_rpm_=case when @Engine_RPM_rpm_='' then null else @Engine_RPM_rpm_ end	
+;

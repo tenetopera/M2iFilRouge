@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+
+<resultset statement="desc iot.X46789" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row>
+	<field name="Field">code</field>
+	<field name="Type">varchar(10)</field>
+	<field name="Null">NO</field>
+	<field name="Key"></field>
+	<field name="Default">X46789</field>
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">dateHour</field>
+	<field name="Type">datetime(6)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">gpsSpeed</field>
+	<field name="Type">decimal(18,15)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">gpsSatCount</field>
+	<field name="Type">decimal(4,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Gear</field>
+	<field name="Type">decimal(4,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Brake_pedal</field>
+	<field name="Type">decimal(4,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Accel_pedal</field>
+	<field name="Type">decimal(4,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Machine_Speed_Mesured</field>
+	<field name="Type">decimal(4,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">AST_Direction</field>
+	<field name="Type">decimal(3,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Ast_HPMB1_Pressure_bar</field>
+	<field name="Type">decimal(3,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Ast_HPMA_Pressure_bar</field>
+	<field name="Type">decimal(3,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Pressure_HighPressureReturn</field>
+	<field name="Type">decimal(6,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Pressure_HighPressure</field>
+	<field name="Type">decimal(6,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Oil_Temperature</field>
+	<field name="Type">decimal(4,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Ast_FrontAxleSpeed_Rpm</field>
+	<field name="Type">decimal(6,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+
+  <row>
+	<field name="Field">Pump_Speed</field>
+	<field name="Type">decimal(5,1)</field>
+	<field name="Null">YES</field>
+	<field name="Key"></field>
+	<field name="Default" xsi:nil="true" />
+	<field name="Extra"></field>
+  </row>
+</resultset>
