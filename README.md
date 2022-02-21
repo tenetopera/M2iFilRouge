@@ -42,8 +42,8 @@ En outre, afin de sattisfaire les exigeances du projet en matière d'intégratio
 
 <ul>
 <li> Le modèle de conception technique pour les données en mouvements générés par les IOT : <i><b>"Conception Architecture Technique Data Streaming IOT.pdf",</i></b></li>
-<li> Le jeu de données récupéré et considéré au titre de l'évolutivité du système en terme d'ajout de flux aditionnel : <i><b>ORNEK_200KM_UZUN_YOL_LOG_COROLLA der version attention date peut etre (1).csv</i></b>. La motivation de ce choix aditionnel s'explique par les jeux de données fournis dont les métriques sont assez maigres et cahotiques par certains aspects. Ceux-ci se composent d'un seul véhicule ou prototype et sont répartis sur une dizaine de fichiers. Chaque fichier relève des mesures s'étalant sur une plage de dix seconde et dont la précision est de l'ordre de la microseconde. Il n'y aucune continuité temporelle entre les plages. Nos recherches nous ont amené à un jeu de données relatant  un trajet de 200 km d'une durée totale de 2h30 pour une véhicule Toyota Corolla très probablement de type diesel. Les métriques sont des l'ordre de la secondes avec une précision de la milliseconde. Ces métriques ont été obtenues par un dump des logs de Torque OBD.
-</li>
+<li> Le jeu de données récupéré et considéré au titre de l'évolutivité du système en terme d'ajout de flux aditionnel : <i><b>ORNEK_200KM_UZUN_YOL_LOG_COROLLA der version attention date peut etre (1).csv</i></b>. La motivation de ce choix aditionnel s'explique par les jeux de données fournis dont les métriques sont assez maigres et cahotiques par certains aspects. Ceux-ci se composent d'un seul véhicule ou prototype et sont répartis sur une dizaine de fichiers. Chaque fichier relève des mesures s'étalant sur une plage de dix seconde et dont la précision est de l'ordre de la microseconde. Il n'y aucune continuité temporelle entre les plages. Nos recherches nous ont amené à un jeu de données relatant  un trajet de 200 km d'une durée totale de 2h30 pour une véhicule Toyota Corolla très probablement de type diesel. Les métriques sont des l'ordre de la secondes avec une précision de la milliseconde. Ces métriques ont été obtenues par un dump des logs de Torque OBD.</li>
+<li> Par ailleurs le modèle conception prend en charge l'ajout de nouveaux flux de avec également de nouveaux schémas. </li>
 </ul>
 
 ### Partie Statique (Mode Batch)
@@ -59,6 +59,11 @@ Pour simuler des IOTs produisant des données en flux continu, il a été néces
 <li>Base de données MySQL contenant les données à produire pour la simulaton des IOTs et chargés initialement par les fichiers csv fournis,</li>
 <li>Les scripts de chargement des données fournie,</li>
 <li>Le/Les programmes Python lisant les donnés de la base données MySQL et produisant un flux continu et cadencé à raison d'une mesure selon une fréquence adaptable en fonction du type de IOT. Les données sont communiquées au format JSON à un microservice par une a requête POST via API REST / HTTP.</li>
+<li>La simulation d'ioT se base sur ce jeu de données (<i><b>ORNEK_200KM_UZUN_YOL_LOG_COROLLA</i></b>) avec :
+    <ul>
+        <li>un redressement à la date courante</li>
+        <li>une réémission avec la même périodicité ou du même ordre, toutes les 100 ms ou 200 ms</li>
+     </ul>
 </ul>
 
 #### Data Streaming
