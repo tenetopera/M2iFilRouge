@@ -42,7 +42,7 @@ En outre, afin de sattisfaire les exigeances du projet en matière d'intégratio
 
 <ul>
 <li> Le modèle de conception technique pour les données en mouvements générés par les IOT : <i><b>"Conception Architecture Technique Data Streaming IOT.pdf",</i></b></li>
-<li> Le jeu de données récupéré et considéré au titre de l'évolutivité du système en terme d'ajout de flux aditionnel : <i><b>ORNEK_200KM_UZUN_YOL_LOG_COROLLA der version attention date peut etre (1).csv</i></b>.</li>
+<li> Le jeu de données récupéré et considéré au titre de l'évolutivité du système en terme d'ajout de flux aditionnel : <i><b>ORNEK_200KM_UZUN_YOL_LOG_COROLLA der version attention date peut etre (1).csv</i></b>. La motivation de ce choix aditionnel s'explique par les jeux de données fournis dont les métriques sont assez maigres et cahotiques par certains aspects. Ceux-ci se composent d'un seul véhicule ou prototype et sont répartis sur une dizaine de fichiers. Chaque fichier relève des mesures s'étalant sur une plage de dix seconde et dont la précision est de l'ordre de la microseconde. Il n'y aucune continuité temporelle entre les plages.</li>
 </ul>
 
 ### Partie Statique (Mode Batch)
