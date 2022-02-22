@@ -1,0 +1,52 @@
+DD David Devidal
+ce fichier -> Descriptif des fichiers présents dans ce répertoire
+-----------------------------------------------------------------
+
+fusionCSVIOT.sh
+	script bash qui a permis d'aggréger nettoyer les données tabulaires du cahier des charges pour les préparer pour injection en SGBDR.
+producer.py
+	Emetteur / simulateur d'IOT, en arguments (obligatoire le code prototype) émet des trames JSON vers un consommateur comme si un IOT était présent.
+	Il se base sur les métriques stockées en base de données, actualisées et temporisées (100-200 ms).
+README BATCH DD.txt
+	Fichier d'information décrivant les grandes étapes de ce travail sur les IOTs et ses commandes, solutions.
+solution_alternative_infludb_grafana.txt
+	fichier décrivant une piste alternative en terme d'architecture (avec influDB base de données temporelles, grafana rendu dataviz libre alternatif à kibana... )
+	note Google GCP utilise pour des solutions d'IOT des architectures : SkySQL (MariaDB en cloud) encapsulé dans kubernetes avec Grafana
+
+
+Sous Répertoires :
+-------------
+La communication avec les scripts services se fait principalement par JSON ou APIs particulières.
+JSON/
+	jsondumpHowto.txt
+		commande d'export JSON natif avec MySQL
+	exemple_de_trame_json_emis_producer.txt
+		exemple d'export JSON natif (pour test) avec MySQL dans ce cadre projet
+
+Nous devons être capable de gérer de multiples IOTs qualifiés par une schéma XML.
+Schema/
+	controlCreatePrototype.py
+		un script qui permet d'insérer un nouveau prototype dans le SGBDR avec son schéma modèle XML.
+	iot_X46789_model.xml
+		le schéma modèle pour le prototype du cahier des charges code X46789.
+	iot_X46789_model.xml
+		le schéma modèle pour le prototype que nous avons principalement travaillé (qualité supérieure) code X467900.
+	iot_prototype_model.xml
+		export du schéma modèle de la table qui détaille les prototype (nom, marque, ...)
+	sp_checkCreateTable.sql
+		script de création de la procédure stockée de mêmes noms qui aide à la création du prototype en base.
+
+divers scripts sql relatifs à la base de données du projet : 
+SQL/
+	corolla.sql
+		script de création de la table des métriques du prototype X46790 alias la Toyota Corolla.
+	import_load_data_into_X46789.sql
+		script ou commande d'import des métriques du prototype X46789 le prototype du cahier des charges.
+	import_load_data_into_X46790.sql
+		script ou commande d'import des métriques du prototype X46790 le prototype que nous avons rajouté (qualité) alias la Toyota Corolla.
+	prototype.sql
+		script de création de la table des prototypes avec les données.
+	sp_tramIOT.sql
+		script de création de la procédure qui permet de retourner un dataset des métriques suivant le code prototype en paramètre.
+	X46789.sql
+		script de création de la table des métriques du prototype X46789 soit le prototype du cahier des charges.
